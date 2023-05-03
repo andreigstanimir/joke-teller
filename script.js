@@ -3,7 +3,7 @@ const audioElement = document.querySelector(".audio");
 
 // Disable/Enable Button
 const toggleButton = function () {
-  btn.disabled = !btn.disable;
+  btn.disabled = !btn.disabled;
 };
 
 // Passing Jjoke to VoiceRSS API
@@ -40,5 +40,11 @@ const getJoke = async function () {
 };
 
 // Event Listeners
-btn.addEventListener("click", getJoke);
-audioElement.addEventListener("ended", toggleButton);
+btn.addEventListener("click", () => {
+  btn.textContent = "Wait...";
+  getJoke();
+});
+audioElement.addEventListener("ended", () => {
+  btn.textContent = "Tell me a joke";
+  toggleButton();
+});

@@ -17,18 +17,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./robot.gif');
+  background: url("./robot.gif");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
 }
 
 .btn {
+  text-transform: uppercase;
   cursor: pointer;
   outline: none;
   width: 200px;
   height: 50px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   color: #fff;
   background: #ff3482;
